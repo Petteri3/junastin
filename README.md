@@ -1,5 +1,5 @@
 # junastin
-## Command line Python script to query VR (Finnish railway company) website for schedules with prices
+## Command line Python script to query VR (Finnish railway company) website for schedules with prices (also for special passangers)
 
 This command line script is designed for quick retrieval of schedules for certain passanger groups. Therefore it is using a "group code" as one command line argument.
 Script must have 5 command line arguments:
@@ -36,8 +36,10 @@ python3 junastin
 ```
 Without arguments script prints results of a previous search if (JSON file) present
 
+NOTE: There is no check/test for the station names. If the station doesn't exist or is mistyped the script still runs but gives no results.
+
 # Ohjeet suomeksi
-Junastin on python skripti jolla voi hakea VR:n sivuilta aikataulut hintoineen, myös erityisryhmille kuten saattajat.
+## Junastin on python skripti jolla voi hakea VR:n sivuilta aikataulut hintoineen, myös erityisryhmille kuten saattajat.
 
 Skriptille pitää antaa 5 argumenttia:
 1. Aloitusasema
@@ -73,5 +75,5 @@ python3 junastin
 ```
 Ilman argumentteja skripti näyttää edellisen haun tulokset (jos haku tehty ja JSON-tiedosto tallessa)
 
-
+HUOM. Skripti ei osaa testata asemien nimiä. Jos haettua asemaa ei ole tai siinä on virhe, skripti ajetaan, mutta tuloksia ei tule. Tarkista asemien nimet tarvittaessa VR:n omalla hakusivulla.
 
