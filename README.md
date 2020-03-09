@@ -9,11 +9,11 @@ Script must have 5 command line arguments:
 4. How many days to search forward (keep this low to not query VR servers too much :)
 5. Group code
 
-Group code format:
+Group code format - amount can be 0-9 per each passanger type:
 1st number: amount of adults
 2nd number: amount of children
 3rd number: amount of students
-4th number: amount of students
+4th number: amount of pensioners
 5th number: amount of conscripts
 6th number: amount of non-military service person
 7th number: amount of assistant (to a disabled traveler)
@@ -34,5 +34,44 @@ Using without arguments:
 ```
 python3 junastin
 ```
-Without arguments script prints results of a previous search if present
+Without arguments script prints results of a previous search if (JSON file) present
+
+# Ohjeet suomeksi
+Junastin on python skripti jolla voi hakea VR:n sivuilta aikataulut hintoineen, myös erityisryhmille kuten saattajat.
+
+Skriptille pitää antaa 5 argumenttia:
+1. Aloitusasema
+2. Pääteasema
+3. Päivämäärä dd.mm.yyyy -muodossa
+4. Kuinka monta päivää eteenpäin haetaan (pidä tämä luku pienenä ettet kuormita liikaa VR:n palvelimia ja haku ei kestä ikuisuuksia :)
+5. Ryhmän koodi
+
+Ryhmän koodi muodostuu numeroista, kutakin matkustajatyyppiä voi olla 0-9 kappaletta:
+1.numero: aikuisten määrä
+2.numero: lasten määrä
+3.numero: opiskelijoiden määrä
+4.numero: eläkeläisten määrä
+5.numero: varusmiesten määrä
+6.numero: siviilipalvelusmiesten määrä
+7.numero: avustajien määrä
+
+Esimerkki ryhmäkoodista: 1210001 (aikuinen, kaksi lasta, opiskelija, avustaja)
+
+Käyttö:
+```
+python3 junastin aloitusasema pääteasema päiväys päivienmäärä ryhmäkoodi 
+```
+
+Esimerkki:
+```
+python3 junastin Rovaniemi Helsinki 23.4.2020 3 1210001
+```
+
+Käyttö ilman argumentteja:
+```
+python3 junastin
+```
+Ilman argumentteja skripti näyttää edellisen haun tulokset (jos haku tehty ja JSON-tiedosto tallessa)
+
+
 
