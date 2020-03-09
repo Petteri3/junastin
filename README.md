@@ -5,5 +5,10 @@ This command line script is designed for quick retrieval of schedules for certai
 
 Using:
 ```
-python3 junastin xxx 
+python3 junastin startstation endstation date daysforward groupcode 
+```
+
+Example:
+```
+python3 junastin Rovaniemi Helsinki 23.4.2020 3 1210001
 ```
