@@ -4,6 +4,6 @@
 This command line script is designed for quick retrieval of schedules for certain passanger groups. Therefore is is using a "passanger code" as one command line argument.
 
 Using:
-´´´
+```
 python3 junastin xxx 
-´´´
+```
