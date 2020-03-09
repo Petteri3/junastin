@@ -1,7 +1,7 @@
 # junastin
 ## Command line Python script to query VR (Finnish railway company) website for schedules with prices
 
-This command line script is designed for quick retrieval of schedules for certain passanger groups. Therefore is is using a "passanger code" as one command line argument.
+This command line script is designed for quick retrieval of schedules for certain passanger groups. Therefore it is using a "group code" as one command line argument.
 Script must have 5 command line arguments:
 1. Start station
 2. End station
